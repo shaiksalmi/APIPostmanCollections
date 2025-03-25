@@ -1,0 +1,39 @@
+[
+{
+	"name": "Naveen",
+
+	"city": "Bangalore"
+},
+
+{
+	
+	"name": "Shailesh",
+	"city": "Delhi",
+	"Designation": "SDET"
+},
+
+{
+	"name": "Reevathi",
+	"city": "Pune",
+	"language":[
+
+	  "Java, JavaScript"
+	]
+
+},
+
+{ 
+	
+	"firstname": "Dhananjai",
+	"lastname":  "Kumar",
+	"totalprice": 111,
+	"depositpaid": true,
+	"bookingdates": {
+	   "checkin": "2018-01-01",
+	   "checkout": "2019-01-01"
+	},
+
+	"additionalneeds": "Breakfast"
+}
+
+]
