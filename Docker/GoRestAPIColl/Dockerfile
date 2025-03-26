@@ -20,15 +20,16 @@ RUN npm install -g newman-reporter-html
 
 RUN npm install -g newman-reporter-htmlextra
 
+#Ensure the results directory exists
+RUN mkdir -p /app/results
+
 # Copy your Postman collection and environment files to the working directory
 
-COPY DataDrivenAPIs.json .
+COPY GoRestAPIWorkflowColl.json /app/
+COPY GoRestEnv.json /app/
 
-COPY GoRestEnv.json .
-
-COPY myuser.csv .
 
 # Set the command to run Newman and execute your Postman collection
 
-CMD ["newman", "run", "DataDrivenAPIs.json", "-e", "GoRestEnv.json", "d", "myuser.csv", "-r", "cli,json,html,htmlextra"]
+CMD ["newman", "run", "/app/GoRestAPIWorkflowColl.json", "-e", "/app/GoRestEnv.json", "-r", "cli,json,html,htmlextra", "--reporter-htmlextra-export", "/app/results/myrest.html"]
 
